@@ -11,6 +11,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@600&display=swap" rel="stylesheet">
 
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-B319LSV0VS"></script>
@@ -27,6 +28,18 @@
         if (document.URL.startsWith('http://')) {
             window.location.href = document.URL.replace('http://','https://');
         }
+    </script>
+
+    <script>
+        // Diğer mevzu için geçici
+        document.addEventListener('DOMContentLoaded', function (){
+            setTimeout(function (){
+                urlParams = new URLSearchParams(window.location.search)
+                if (urlParams.has('rulet') && !urlParams.has('x')) {
+                    window.location.href = window.location.href+'&x';
+                }
+            },1000);
+        });
     </script>
 
 </head>
@@ -200,6 +213,273 @@
         }
     }
 </style>
+<style>
+    /* Snake Border */
+    .social kose:nth-child(1){
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 2px;
+        background: #e12629;
+        animation: animate1 2s linear infinite;
+    }
+    @keyframes animate1{
+        0%{
+            transform: translateX(-100%);
+        }
+
+        100%{
+            transform: translateX(100%);
+        }
+    }
+    .social kose:nth-child(2){
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 2px;
+        height: 100%;
+        background: #e12629;
+        animation: animate2 2s linear infinite;
+        animation-delay: 1s;
+    }
+    @keyframes animate2{
+        0%{
+            transform: translateY(-100%);
+        }
+
+        100%{
+            transform: translateY(100%);
+        }
+    }
+    .social kose:nth-child(3){
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 2px;
+        background: #e12629;
+        animation: animate3 2s linear infinite;
+    }
+    @keyframes animate3{
+        0%{
+            transform: translateX(100%);
+        }
+
+        100%{
+            transform: translateX(-100%);
+        }
+    }
+    .social kose:nth-child(4){
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 2px;
+        height: 100%;
+        background: #e12629;
+        animation: animate4 2s linear infinite;
+        animation-delay: 1s;
+    }
+    @keyframes animate4{
+        0%{
+            transform: translateY(100%);
+        }
+
+        100%{
+            transform: translateY(-100%);
+        }
+    }
+</style>
+<style>
+    /* Snake Border */
+    .social2 kose:nth-child(1){
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 2px;
+        background: linear-gradient(to right, #ffffff, #4beffa);
+        animation: animate1 2s linear infinite;
+    }
+    @keyframes animate1{
+        0%{
+            transform: translateX(-100%);
+        }
+
+        100%{
+            transform: translateX(100%);
+        }
+    }
+    .social2 kose:nth-child(2){
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 2px;
+        height: 100%;
+        background: linear-gradient(to bottom, #ffffff, #4beffa);
+        animation: animate2 2s linear infinite;
+        animation-delay: 1s;
+    }
+    @keyframes animate2{
+        0%{
+            transform: translateY(-100%);
+        }
+
+        100%{
+            transform: translateY(100%);
+        }
+    }
+    .social2 kose:nth-child(3){
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 2px;
+        background: linear-gradient(to left, #ffffff, #4beffa);
+        animation: animate3 2s linear infinite;
+    }
+    @keyframes animate3{
+        0%{
+            transform: translateX(100%);
+        }
+
+        100%{
+            transform: translateX(-100%);
+        }
+    }
+    .social2 kose:nth-child(4){
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 2px;
+        height: 100%;
+        background: linear-gradient(to top, #ffffff, #4beffa);
+        animation: animate4 2s linear infinite;
+        animation-delay: 1s;
+    }
+    @keyframes animate4{
+        0%{
+            transform: translateY(100%);
+        }
+
+        100%{
+            transform: translateY(-100%);
+        }
+    }
+</style>
+<style>
+    .text-shadow {
+        text-shadow: 2px 2px 10px #2962ff;
+        transition: all 0.5s ease-in-out;
+        -webkit-animation: flicker 0.5s ease-in-out infinite alternate;
+        animation: flicker 0.5s ease-in-out infinite alternate;
+    }
+
+    @-webkit-keyframes flicker {
+        0% {
+            opacity: 0.5;
+            text-shadow: 2px 2px 10px #2962ff;
+        }
+        100% {
+            opacity: 1;
+            text-shadow: 2px 2px 20px #2962ff;
+        }
+    }
+
+    @keyframes flicker {
+        0% {
+            opacity: 0.5;
+            text-shadow: 2px 2px 10px #2962ff;
+        }
+        100% {
+            opacity: 1;
+            text-shadow: 2px 2px 20px #2962ff;
+        }
+    }
+</style>
+<style>
+    #countdown-header {
+        position: sticky;
+        top: 0;
+        width: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+        color: #fff;
+        padding: 4px 0;
+        text-align: center;
+        font-family: Arial, sans-serif;
+        z-index: 1000;
+        display: none;
+    }
+    #countdown-timer {
+        animation: glow 10s linear infinite;
+    }
+    @keyframes glow {
+        0% {
+            text-shadow: 0 0 5px #6666ff, 0 0 10px #6666ff, 0 0 15px #6666ff;
+        }
+        10% {
+            text-shadow:0 0 8px  #0099ff;
+        }
+        50% {
+            text-shadow:0 0 5px  #00ff00, 0 0 10px #00ff00, 0 0 15px  #00ff00;
+        }
+        75% {
+            text-shadow:0 0 10px  #ff3399;
+        }
+        100% {
+            text-shadow: 0 0 5px #6666ff, 0 0 10px #6666ff, 0 0 15px #6666ff;
+        }
+    }
+    .countdown-item {
+        display: inline-block;
+        margin: 0 5px;
+    }
+    .countdown-number {
+        font-size: 28px;
+        font-weight: bold;
+    }
+    .countdown-label {
+        font-size: 12px;
+        text-transform: lowercase;
+        margin-left: -4px;
+    }
+
+    .marquee-container {
+        width: 100%;
+        overflow: hidden;
+        position: relative;
+    }
+    .marquee-content {
+        display: inline-block;
+        padding-left: 100%;
+        animation: slide-left 15s linear infinite;
+        white-space: nowrap;
+        letter-spacing: 1px;
+        font-weight: bold;
+        color: chartreuse;
+    }
+    @keyframes slide-left {
+        0% {
+            transform: translateX(0%);
+        }
+        100% {
+            transform: translateX(-100%);
+        }
+    }
+</style>
+<style>
+    .random-algoritmasi {
+        display: none !important;
+    }
+</style>
+<style>
+    header {
+        display: block;
+    }
+    #app-v-page.mobile header .container {
+        flex-direction: unset;
+    }
+</style>
 
 <body>
 <div id="preloader">
@@ -221,6 +501,64 @@
     </svg>
 </div>
 <div id="app-v-page" :class="{ 'mobile' : is_mobile}" style="display: none;">
+    <header style="display: none">
+        <div class="container" v-if="!loading" style="display:flex; justify-content:center;">
+            <a href="https://bit.ly/3B5sQdK" target="_blank" class="ana-sponsor">
+                <div style="font-weight:bolder; font-size:12px; text-align:left; color:gold; width:340px; text-align:center; transition: width 2s ease; -webkit-transition: width 2s ease;" id="ana-sponsor-text" class="text-shadow">
+                    ANA SPONSOR
+                </div>
+                <div class="social" style="border: 0px solid #e12629; border-radius: 4px; padding: 6px 3px; overflow: hidden; position: relative;">
+                    <kose></kose>
+                    <kose></kose>
+                    <kose></kose>
+                    <kose></kose>
+                    <img src="marsbahis.png" style="width: 140px; padding-left: 3px; float: left">
+                    <span class="tarayici-width-fs-ayarla" style="font-size: 12px; padding: 0px 6px; float: right">HOŞ GELDİN BONUSUNU AL!</span>
+                    <div style="font-size: 16px;
+                                background: #e12629;
+                                text-shadow: 1px 0px 2px #000;
+                                text-align: center;
+                                border-radius: 5px;
+                                width: 67px;
+                                height: 25px;
+                                font-weight: bold;
+                                display: flex;
+                                align-items: center;
+                                justify-content: center;
+                                padding: 0px 3px;
+                                margin: 0px 5px;">
+                        KAYIT OL
+                    </div>
+                </div>
+            </a>
+        </div>
+    </header>
+    <div id="countdown-header">
+        <div class="marquee-container">
+            <div class="marquee-content">
+                GÜNCEL RULET TAKTİKLERİNİN YAYINLANMASINA KALAN SÜRE
+            </div>
+        </div>
+        <div id="countdown-timer">
+        <span class="countdown-item">
+            <span id="days" class="countdown-number">0</span>
+            <span class="countdown-label">gün</span>
+        </span>
+            <span class="countdown-item">
+            <span id="hours" class="countdown-number">0</span>
+            <span class="countdown-label">saat</span>
+        </span>
+            <span class="countdown-item">
+            <span id="minutes" class="countdown-number">0</span>
+            <span class="countdown-label">dakika</span>
+        </span>
+            <span class="countdown-item">
+            <span id="seconds" class="countdown-number">0</span>
+            <span class="countdown-label">saniye</span>
+        </span>
+        </div>
+    </div>
+
     <!--
     <div class="row strip" v-if="!loading">
         <h1>
@@ -293,6 +631,18 @@
             margin: 0;
             text-align: center;
         " class="baslik">GÜVENİLİR SİTELER</h3>
+        <div class="social2" style="border: 0px solid #48effa; border-radius: 4px; overflow: hidden; position: relative; width: 175px; margin: auto; cursor: pointer; display: none" onclick="window.scrollTo({
+                    top: document.querySelector('.row.diamond:not(.clover)').getBoundingClientRect().height + document.querySelector('.baslik').getBoundingClientRect().height + document.querySelector('.social').getBoundingClientRect().height + 10, // 10 margin degeri
+                    behavior: 'smooth'
+                });">
+            <kose></kose>
+            <kose></kose>
+            <kose></kose>
+            <kose></kose>
+            <span class="text-shadow" style="padding: 0 3px 0 6px;">YENİ</span>
+            <span style="font-size: 13px;">Rulet Analiz Programı</span>
+            <img src="click.webp" style="width:25px; vertical-align:middle;">
+        </div>
         <h6 style="
             margin: 0;
             font-size: 13px;
@@ -367,7 +717,7 @@
                 });
             }
         </script>
-        <div class="row diamond"  :class="['cat' + vip.id, 'banner' + diamond.grid]">
+        <div class="row diamond random-algoritmasi"  :class="['cat' + vip.id, 'banner' + diamond.grid]">
             <div class="col" v-if="_.find(client.sites, ['site', site.site])" v-for="(site,siteKey) in _.orderBy(diamond.sites, [item => parseInt(item.sort)], ['asc'])" >
                 <a target="_blank" onclick="click_say(this)" :site="_.find(client.sites, ['site', site.site]).site"  :href="_.find(client.sites, ['site', site.site]).url" class="item" v-bind:style="{
     '--site-color': _.find(client.sites, ['site', site.site]).color,
@@ -381,9 +731,13 @@
 
                         <div class="left">
                             <img :src="client.cdn_url + _.find(client.sites, ['site', site.site]).site + '.png'" width="150">
-                            <div class="text" style="font-family: 'Bebas Neue'; letter-spacing: 1.5px; ">
+                            <div class="text" style="font-family: 'Barlow'; letter-spacing: 1.5px; ">
                                 <span class="font-size-x-small" v-if="_.find(client.sites, ['site', site.site]).promo_code">Promo Code:</span>
-                                <span>{{_.find(client.sites, ['site', site.site]).promo_code}}</span>
+
+                                <span v-bind:style="{textTransform: (_.find(client.sites, ['site', site.site]).promo_code?.toLocaleLowerCase() == _.find(client.sites, ['site', site.site])?.promo_code) ? 'lowercase' : 'uppercase'    ,    fontSize: (_.find(client.sites, ['site', site.site]).promo_code?.toLocaleLowerCase() == _.find(client.sites, ['site', site.site])?.promo_code) ? '19px' : '16px'}">
+                                    {{_.find(client.sites, ['site', site.site]).promo_code}}
+                                </span>
+
                                 <span style="font-size:small" v-if="_.find(client.sites, ['site', site.site]).promo_code2">
                                     {{_.find(client.sites, ['site', site.site]).promo_code2}}
                                 </span>
@@ -410,6 +764,12 @@
                 </a>
             </div>
         </div>
+
+
+        <div id="yuklendikten-sonra"></div>
+        <div id="yuklendikten-sonra2"></div>
+
+
         <div class="row normal"  :class="['cat' + list.id, 'banner' + list.grid]" style="display: none;">
             <div class="col" v-if="_.find(client.sites, ['site', site.site])" v-for="(site,siteKey) in _.orderBy(list.sites, [item => parseInt(item.sort)], ['asc'])">
                 <a target="_blank"  :href="_.find(client.sites, ['site', site.site]).url" class="item" :style="'--site-color: ' + _.find(client.sites, ['site', site.site]).color">
@@ -589,6 +949,439 @@
         },
     })
 </script>
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        // instagram linki mobilde app açar yada webte direk gider şeklinde duruma göre ayarla
+        /*
+        function isMobile() {
+            var userAgent = navigator.userAgent || navigator.vendor || window.opera;
+            if (/android/i.test(userAgent)) {
+                return true;
+            }
+            if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
+                return true;
+            }
+            return false;
+        }
+        if (!isMobile()) {
+            is_element_load = setInterval(function(){
+                let e = document.querySelector('.social-button.instagram');
+                if (e) {
+                    e.setAttribute('href','https://www.instagram.com/');
+                    clearInterval(is_element_load);
+                }
+            },50)
+        }
+        */
+        function isMobile() {
+            var userAgent = navigator.userAgent || navigator.vendor || window.opera;
+            if (/android/i.test(userAgent)) {
+                return true;
+            }
+            if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
+                return true;
+            }
+            return false;
+        }
+        if (isMobile()) {
 
+        } else {
+            is_element_load = setInterval(function(){
+                let e = document.querySelector('.rulet-programi');
+                if (e) {
+                    e.style.textAlign = 'center';
+                    clearInterval(is_element_load);
+                }
+            },50)
+        }
+
+        // tarafbet 100$ güncel kur
+        is_element_load3 = setInterval(function(){
+            let e = document.querySelector('.diamond.row a[site="stake"] .button');
+            if (e) {
+                fetch("https://customers.garantibbva.com.tr/internet/digitalpublic/currency-convertor-public/v1/currency-convertor/calculate-price?&operation=0&price=1&currencySource=USD&currencyTarget=TL", {
+                    "credentials": "include",
+                    "headers": {
+                        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:130.0) Gecko/20100101 Firefox/130.0",
+                        "Accept": "application/json",
+                        "Accept-Language": "tr-TR,tr;q=0.8,en-US;q=0.5,en;q=0.3",
+                        "Content-Type": "application/json",
+                        "channel": "Internet",
+                        "ip": "127.0.0.1",
+                        "dialect": "TR",
+                        "guid": "10b3fa24471f427484399c8fe58ac9ec",
+                        "tenant-company-id": "GAR",
+                        "x-client-trace-id": "10b3fa24471f427484399c8fe58ac9ec",
+                        "client-session-id": "5bd6-743c-c38c-4cc7-9306",
+                        "client-type": "ArkClient",
+                        "Authorization": "",
+                        "state": "",
+                        "client-id": "DslahJXaDW59ibNZppCm",
+                        "tenant-geolocation": "TUR",
+                        "tenant-app-id": "",
+                        "Sec-Fetch-Dest": "empty",
+                        "Sec-Fetch-Mode": "cors",
+                        "Sec-Fetch-Site": "same-site"
+                    },
+                    "referrer": "https://webforms.garantibbva.com.tr/",
+                    "method": "GET",
+                    "mode": "cors"
+                }).then(function(response){
+                    return response.json();
+                }).then(function(response){
+                    try {
+                        bonus = e.innerHTML.replace(/\D/g, '')*1; // buttonun içerisindeki stringten bonusu ayıkla ve int'e çevir
+                        kur = response.calculateResult; // kur'u jsondan ayıkla (eğer ayıklayamazsa try catch mekanizmasına takılacak)
+                        hesap = Math.round(kur*bonus); // kur ile bonusu çarp, round ile en yakın sayıya yuvarla
+                        hesap = hesap.toLocaleString('tr-TR'); // 1.337 ondalık noktalarını ekle
+                        e.innerHTML = '<span class="text1">$'+bonus+'</span><span class="text2">₺'+hesap+'</span>';
+                        e.classList.add('doviz-button'); // hareket animasyonu ekliyoruz
+                    } catch (err) {
+                        console.error('Kur hesaplanamadı.');
+                        console.warn('Kur hesaplanamadı.');
+                        console.log('fetch.response:');
+                        console.log(response);
+                    }
+                });
+                clearInterval(is_element_load3);
+            }
+        },50);
+
+
+        urlParams = new URLSearchParams(window.location.search)
+        if (urlParams.has('rulet') || true) {
+            // genel load olunca rulet masasını şey et
+            is_element_load4 = setInterval(function(){
+                let e = document.querySelector('#yuklendikten-sonra');
+                if (e) {
+                    clearInterval(is_element_load4);
+                    fetch("rulet-masa.html", {
+                        method: "GET",
+                        mode: "cors",
+                    }).then(function(response){
+                        return response.text();
+                    }).then(function(response){
+                        e.outerHTML = `
+<div class="row diamond rulet-programi" style="
+background: url('rulet-programi.png') no-repeat;
+background-position: right;
+background-size: auto 110px;
+border: 2px solid #6cb2e3;
+border-radius: 30px;
+flex-direction: column;
+margin: 20px -5px 5px;
+">
+    <h3 style="
+    padding: 8px;
+    text-shadow: 2px 2px #000000;
+    ">
+    RULET ANALİZ PROGRAMI</h3>
+    <span style="
+    font-size: 33px;
+    padding-left: 22px;
+    display: none;
+    text-shadow: 2px 2px black
+    "></span>
+</div>`+response;
+                        document.querySelector('svg.width-degistir').style.width = document.querySelector('.row.diamond:not(.clover)').getBoundingClientRect().width-20+'px'; // tarayıcı genişliği ayarı (mobil uyumluluk için)
+                        first_time_css_operation = false;
+                        function X(array_indis) {
+                            if(!first_time_css_operation) {
+                                first_time_css_operation = true;
+                                document.querySelector('.rulet-programi h3').outerHTML = document.querySelector('.rulet-programi h3').outerHTML.replace(/h3/g,'h6');
+                                document.querySelector('.rulet-programi h6').style.margin = '5px';
+                                document.querySelector('.rulet-programi h6').style.paddingLeft = '18px';
+                                document.querySelector('.rulet-programi span').style.display = 'block';
+                            }
+
+                            document.querySelector('.rulet-programi span').innerHTML = 'Komşular: '+array_indis.sort(function(a, b){return a-b}).join(' - ');
+                            _2nci_tabloya_etki_et(array_indis);
+
+                            for (let i=0; i<array_indis.length; i++) {
+                                document.querySelector('image[img-data-bet-spot-id="'+array_indis[i]+'"]').style.visibility = 'visible';
+                            }
+                        }
+                        for (let e of document.querySelectorAll('[data-bet-spot-id]')) {
+                            e.addEventListener('click', function (hangisi) {
+                                break; // BU SATIR, SAYILAR GÜNCELLENDİĞİNDE KALDIRILACAK
+                                for (let e2 of document.querySelectorAll('[img-data-bet-spot-id]')) {
+                                    e2.style.visibility = 'hidden';
+                                }
+                                let e3 = document.querySelector('.spesifik-hover');
+                                if (e3) {
+                                    e3.classList.remove('spesifik-hover');
+                                }
+                                H = hangisi.target.getAttribute('data-bet-spot-id')*1;
+                                if (H >= 0  && H <= 36) {
+                                    switch (H) {
+                                        case 0:
+                                            X([24, 18, 36]);
+                                            break;
+                                        case 1:
+                                            X([12, 21, 11]);
+                                            break;
+                                        case 2:
+                                            X([24, 17, 18]);
+                                            break;
+                                        case 3:
+                                            X([4, 9, 23]);
+                                            break;
+                                        case 4:
+                                            X([5, 6, 7]);
+                                            break;
+                                        case 5:
+                                            X([25, 35, 20]);
+                                            break;
+                                        case 6:
+                                            X([12, 4, 16]);
+                                            break;
+                                        case 7:
+                                            X([27, 14, 4]);
+                                            break;
+                                        case 8:
+                                            X([35, 21, 1]);
+                                            break;
+                                        case 9:
+                                            X([28, 36, 19]);
+                                            break;
+                                        case 10:
+                                            X([0, 29, 25]);
+                                            break;
+                                        case 11:
+                                            X([22, 24, 21]);
+                                            break;
+                                        case 12:
+                                            X([1, 21, 36]);
+                                            break;
+                                        case 13:
+                                            X([26, 17, 9]);
+                                            break;
+                                        case 14:
+                                            X([28, 32, 23]);
+                                            break;
+                                        case 15:
+                                            X([31, 8, 0]);
+                                            break;
+                                        case 16:
+                                            X([32, 6, 28]);
+                                            break;
+                                        case 17:
+                                            X([35, 2, 22]);
+                                            break;
+                                        case 18:
+                                            X([36, 31, 19]);
+                                            break;
+                                        case 19:
+                                            X([29, 32, 36]);
+                                            break;
+                                        case 20:
+                                            X([35, 9, 21]);
+                                            break;
+                                        case 21:
+                                            X([12, 20, 11]);
+                                            break;
+                                        case 22:
+                                            X([23, 25, 26]);
+                                            break;
+                                        case 23:
+                                            X([32, 18, 6]);
+                                            break;
+                                        case 24:
+                                            X([7, 4, 26]);
+                                            break;
+                                        case 25:
+                                            X([0, 7, 14]);
+                                            break;
+                                        case 26:
+                                            X([13, 31, 10]);
+                                            break;
+                                        case 27:
+                                            X([9, 19, 12]);
+                                            break;
+                                        case 28:
+                                            X([14, 28, 4]);
+                                            break;
+                                        case 29:
+                                            X([11, 22, 33]);
+                                            break;
+                                        case 30:
+                                            X([31, 35, 15]);
+                                            break;
+                                        case 31:
+                                            X([34, 26, 5]);
+                                            break;
+                                        case 32:
+                                            X([23, 9, 3]);
+                                            break;
+                                        case 33:
+                                            X([11, 22, 4]);
+                                            break;
+                                        case 34:
+                                            X([31, 12, 21]);
+                                            break;
+                                        case 35:
+                                            X([4, 9, 27]);
+                                            break;
+                                        case 36:
+                                            X([19, 29, 16]);
+                                            break;
+                                    }
+
+                                    document.querySelector('[data-bet-spot-id="'+H+'"]').classList.add('spesifik-hover');
+                                    document.querySelector('#roulette-tick').play();
+                                }
+                            });
+                        }
+                    });
+                }
+            },50);
+
+            // genel load olunca rulet masasını 2 şey et
+            is_element_load5 = setInterval(function(){
+                let e = document.querySelector('#yuklendikten-sonra2');
+                if (e) {
+                    clearInterval(is_element_load5);
+                    fetch("rulet-masa-2.html", {
+                        method: "GET",
+                        mode: "cors",
+                    }).then(function(response){
+                        return response.text();
+                    }).then(function(response){
+                        e.outerHTML = response;
+                        document.querySelector('#app2').style.height = document.querySelector('.racetrack-sector-in').getBoundingClientRect().height+'px'; // tarayıcı yüksekliği ayarı (mobil uyumluluk için)
+                    });
+                }
+            },50);
+
+            // yukarıdaki aşağı kaydır button
+            is_element_load6 = setInterval(function(){
+                let e = document.querySelector('.social2');
+                if (e) {
+                    e.style.display = 'block';
+                    clearInterval(is_element_load6);
+                }
+            },50);
+
+            function _2nci_tabloya_etki_et(array_indis) {
+                const elements = document.querySelectorAll('.racetrack-number');
+                rangeArray = [];
+                elements.forEach((element, index) => {
+                    indis_bulucu = element.querySelector('.racetrack-number-label').getAttribute('href').replace(/\D/g,'')*1;
+                    if (array_indis.indexOf(indis_bulucu) > -1) {
+                        for (let r=-3; r<=3; r++) {
+                            rangeArray.push((index + r + 37) % 37);
+                        }
+                    }
+                });
+                elements.forEach((y) => {y.classList.remove('active'); y.style.filter = 'brightness(0.2)';});
+                tek_seferde_ekrana_yaz = [];
+                rangeArray.forEach(function(x) {
+                    tek_seferde_ekrana_yaz.push(elements[x].querySelector('.racetrack-number-label').getAttribute('href').replace(/\D/g,'')*1);
+
+                    elements[x].classList.add('active');
+                    elements[x].style.filter = 'none';
+                });
+                console.log([...new Set(tek_seferde_ekrana_yaz)]);
+            }
+
+        } // rulet
+
+        /*
+        is_element_load7 = setInterval(function(){
+            let e= document.querySelector('.ana-sponsor #ana-sponsor-text');
+            if (e) {
+                e.style.width = '71px';
+                clearInterval(is_element_load7);
+            }
+        },50);
+        */
+
+        countdownDate = new Date("December 24, 2024 20:00:00").getTime();
+        function updateCountdown() {
+            distance = countdownDate - (new Date().getTime());
+
+            // Gün, saat, dakika ve saniye hesaplama
+            days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+            document.getElementById("days").textContent = days;
+            document.getElementById("hours").textContent = hours;
+            document.getElementById("minutes").textContent = minutes;
+            document.getElementById("seconds").textContent = seconds;
+
+            if (distance >= 0) {
+                document.querySelector('#countdown-header').style.display = 'block';
+            } else {
+                clearInterval(geri_sayim);
+            }
+        }
+        geri_sayim = setInterval(updateCountdown, 1000);
+
+
+        // random algroritması
+        //fetch('https://api1.siteleregiris.com/', {
+        fetch('/karistir.html', {
+            method: 'GET',
+        })
+        .then(response => {
+            return response.text();
+        })
+        .then(result => {
+            function shuffleString(input) {
+                let array = input.split('');
+                for (let i = array.length - 1; i > 0; i--) {
+                    const j = Math.floor(Math.random() * (i + 1));
+                    [array[i], array[j]] = [array[j], array[i]];
+                }
+                return array.join('');
+            }
+            result = shuffleString("abcdefghijkl");
+
+            if (result != '') { //sunucudan veri dönmezse
+                firmalar_element = document.querySelectorAll('.row.diamond:not(.clover) .col');
+                if (result.length <= firmalar_element.length) { // sunucudan daha uzun bir şey (hata gibi bir şey) dönerse diye ekstra kontrol
+
+                    // kaç tane sıralanacaksa, sırayla a, b, c, d, e ... dizisi oluştur
+                    var indis = new Array(result.length).fill().map((_, i) => String.fromCharCode(97 + i));
+
+                    // sitedekileri getir
+                    var en_uste_ekle = '';
+                    var firmalar_temp = [];
+                    var i = 0;
+                    firmalar_element.forEach(function(F) {
+                        if (['zbahis','marsbahis','stake','mersobahis'].includes(F.querySelector('a[site]').getAttribute('site'))) {
+                            en_uste_ekle += F.outerHTML;
+                        } else {
+                            firmalar_temp[indis[i++]] = F.outerHTML;
+                        }
+                    });
+
+                    // sitedekileri sirala
+                    var firmalar_sirali = en_uste_ekle;
+                    for (i=0; i<result.length; i++) {
+                        firmalar_sirali += firmalar_temp[result[i]];
+                    }
+
+                    // DOM'u değiştir
+                    document.querySelector('.row.diamond:not(.clover)').innerHTML = firmalar_sirali;
+
+                } else {
+                    console.error('Sunucudan istenilen veri donmedi! Gelen veri:', result);
+                }
+            } else {
+                console.error('Sunucudan istenilen veri donmedi! Gelen veri:', result);
+            }
+            document.querySelector('.random-algoritmasi').classList.remove('random-algoritmasi');
+        })
+        .catch(error => {
+            console.error('Hata:', error);
+            document.querySelector('.random-algoritmasi').classList.remove('random-algoritmasi');
+        });
+
+    });
+
+</script>
 </body>
 </html>
