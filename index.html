@@ -1102,8 +1102,8 @@ margin: 20px -5px 5px;
                             }
                         }
                         for (let e of document.querySelectorAll('[data-bet-spot-id]')) {
+                            return; // BU SATIR, SAYILAR GÜNCELLENDİĞİNDE KALDIRILACAK
                             e.addEventListener('click', function (hangisi) {
-                                break; // BU SATIR, SAYILAR GÜNCELLENDİĞİNDE KALDIRILACAK
                                 for (let e2 of document.querySelectorAll('[img-data-bet-spot-id]')) {
                                     e2.style.visibility = 'hidden';
                                 }
